@@ -1,0 +1,29 @@
+.features {
+  padding-top: 80px;
+
+  .kartica {
+    width: 100px;
+    height: 50px;
+    background: teal;
+  }
+}
+
+#features-container {
+  width: 100%;
+  justify-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 55px;
+}
+
+@media (max-width: 1440px) {
+  .features {
+    padding-top: 13px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .features {
+    padding-top: 33px;
+  }
+}

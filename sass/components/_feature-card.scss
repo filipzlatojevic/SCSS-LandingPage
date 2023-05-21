@@ -1,0 +1,21 @@
+.feature-card {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(50%, 50%);
+    width: 18px;
+    height: 18px;
+  }
+
+  span {
+    font-family: 'Comfortaa', cursive;
+    color: var(--text-heading);
+  }
+}
