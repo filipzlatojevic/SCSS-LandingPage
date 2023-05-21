@@ -1,0 +1,159 @@
+.dynamic-static-qr {
+  background: var(--bg-secondary);
+  padding-bottom: 90px;
+  padding-top: 46px;
+
+  .aside-wrapper {
+    margin-top: 47px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 70px;
+
+    aside {
+      width: 100%;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: nowrap;
+
+      .video-wrapper {
+        flex: 1;
+      }
+
+      .text-wrapper {
+        flex: 1;
+
+        .header-wrapper {
+          display: flex;
+          align-items: center;
+          justify-content: start;
+          gap: 8px;
+          margin-bottom: 8px;
+
+          h3 {
+            display: inline-block;
+            font-size: 35.16px;
+          }
+        }
+
+        p {
+          margin-bottom: 16px;
+        }
+
+        ul li {
+          margin-bottom: 8px;
+
+          img {
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.inner-video-wrapper {
+  width: 660px;
+  height: 393px;
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 15px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .dynamic-static-qr {
+    .header-wrapper img {
+      width: 28px;
+      height: 28px;
+    }
+
+    .aside-wrapper {
+      margin-top: 44px;
+
+      aside {
+        gap: 150px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1440px) {
+  .dynamic-static-qr {
+    padding-top: 24px;
+    padding-bottom: 27px;
+
+    .aside-wrapper {
+      margin-top: 24px;
+      gap: 32px;
+
+      aside {
+        flex-wrap: wrap;
+        gap: 100px;
+
+        .text-wrapper .header-wrapper h3 {
+          font-size: 27.34px;
+        }
+      }
+    }
+
+    .inner-video-wrapper {
+      width: 475px;
+      height: 283px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .dynamic-static-qr {
+    .aside-wrapper {
+      aside {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      aside.dynamic {
+        .video-wrapper {
+          order: 2;
+        }
+
+        .text-wrapper {
+          order: 1;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .dynamic-static-qr {
+    .inner-video-wrapper {
+      max-width: 344px;
+      height: 205px;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .dynamic-static-qr {
+    padding-bottom: 66px;
+  }
+}
+
+@media (max-width: 400px) {
+  .dynamic-static-qr {
+    .inner-video-wrapper {
+      max-width: 244px;
+      height: 140px;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.section-heading {
+  h2 {
+    font-size: 44px;
+    margin-bottom: 16px;
+  }
+
+  p {
+    display: inline-block;
+    max-width: 509px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .section-heading {
+    h2 {
+      font-size: 34px;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .section-heading {
+    h2 {
+      margin-bottom: 7px;
+    }
+  }
+}

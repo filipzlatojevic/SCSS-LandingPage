@@ -1,13 +1,10 @@
 @import '../components/header/header';
+@import '../components/section-heading';
+
 @import '../sections/hero';
+@import '../sections/dynamic-static-qr';
+@import '../sections/_features.scss';
 
 body {
   background-color: var(--bg);
-  overflow: hidden;
-}
-
-main {
-  padding: 0 40px;
-  max-width: 1800px;
-  margin: auto;
 }

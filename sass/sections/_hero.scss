@@ -1,6 +1,12 @@
 .hero {
+  padding-top: 145px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   .container {
-    min-height: 712px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -41,6 +47,7 @@
   }
 
   .img-block {
+    display: block;
     margin-right: 150px;
     flex: 1;
     max-width: 600px;
@@ -52,6 +59,7 @@
 
     .qr-code-container {
       position: absolute;
+      z-index: 10;
       width: 35%;
       height: 35%;
       top: 7%;
@@ -61,7 +69,8 @@
 
       img {
         display: block;
-        position: inherit;
+        position: absolute;
+        z-index: 10;
 
         &[alt='qr-code'] {
           top: 50%;
@@ -81,6 +90,9 @@
 
 @media (max-width: 1440px) {
   .hero {
+    .container {
+      gap: 30px;
+    }
     .img-block {
       margin: 0;
     }
@@ -93,15 +105,45 @@
       flex-direction: column;
       align-items: center;
       justify-content: space-between;
-      gap: 30px;
+    }
+
+    .btn-wrapper {
+      margin-top: 24px;
+
+      a {
+        width: 198px;
+        height: 47px;
+      }
+    }
+
+    .img-block .qr-code-container img[alt='qr-code'] {
+      top: 44%;
     }
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .hero {
-    .text-block {
-      max-width: 300px;
+    .btn-wrapper {
+      flex-wrap: wrap;
+      gap: 17px;
     }
+  }
+}
+
+@media (max-width: 450px) {
+  .hero {
+    .container {
+      align-items: start;
+
+      .img-block {
+        align-self: center;
+      }
+    }
+
+    .btn-wrapper {
+      margin-top: 32px;
+    }
+    padding-top: 102px;
   }
 }
