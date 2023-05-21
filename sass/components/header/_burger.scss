@@ -1,0 +1,40 @@
+.burger {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .burger {
+    display: inline-block;
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 27px;
+    height: 27px;
+
+    div {
+      width: 27px;
+      height: 4px;
+      margin: 4px 0;
+      border-radius: 2px;
+      background-color: var(--text-heading);
+
+      transform-origin: center;
+      transition: transform 310ms ease-out;
+    }
+
+    &:hover div {
+      background-color: $orange-300;
+    }
+  }
+
+  .burger.active {
+    .top {
+      transform: rotate(45deg) translateY(5px);
+    }
+
+    .bottom {
+      transform: rotate(-45deg) translateY(-5px);
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.hero {
+  .text-block {
+    display: flex;
+  }
+
+  .img-block {
+    img {
+      display: block;
+    }
+  }
+}
+
+.dark .hero .img-block img {
+  filter: invert(100%);
+}
+
+.dark #hero-img {
+  filter: invert(100%);
+}

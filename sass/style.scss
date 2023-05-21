@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;700&family=Roboto&display=swap');
+@import './base/variables';
+@import './base/reset';
+@import './pages/home';
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: cubic-bezier(0.68, -0.55, 0.27, 01.55) 420ms !important;
+  transition-delay: 0 !important;
+}

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+  
+<g transform="matrix(1.4285714285714286,0,0,1.4285714285714286,0,0)"><g>
+    <rect width="6" height="6" rx="1.5" transform="translate(0 6) rotate(-90)" style="fill: #000000"></rect>
+    <rect x="8" width="6" height="6" rx="1.5" transform="translate(8 14) rotate(-90)" style="fill: #000000"></rect>
+    <rect y="8" width="6" height="6" rx="1.5" transform="translate(-8 14) rotate(-90)" style="fill: #000000"></rect>
+    <rect x="8" y="8" width="6" height="6" rx="1.5" transform="translate(0 22) rotate(-90)" style="fill: #000000"></rect>
+  </g></g></svg>
