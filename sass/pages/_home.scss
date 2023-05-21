@@ -1,5 +1,13 @@
 @import '../components/header/header';
+@import '../sections/hero';
 
 body {
   background-color: var(--bg);
+  overflow: hidden;
+}
+
+main {
+  padding: 0 40px;
+  max-width: 1800px;
+  margin: auto;
 }

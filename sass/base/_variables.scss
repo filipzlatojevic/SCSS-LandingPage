@@ -104,3 +104,25 @@ $btn-pxs: (
 .text-orange {
   color: $orange-300;
 }
+
+.icon path {
+  fill: currentColor;
+}
+
+// animation keyframes
+@keyframes levitate {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40%,
+  80% {
+    transform: translateY(-5%);
+  }
+
+  20%,
+  60% {
+    transform: translateY(5%);
+  }
+}

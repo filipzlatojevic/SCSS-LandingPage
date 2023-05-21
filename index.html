@@ -35,10 +35,10 @@
           <nav>
             <div class="helper"></div>
             <ul>
-              <li><a href="#">Generate QR Codes</a></li>
-              <li><a href="#">Pricing</a></li>
-              <li><a class="underline" href="/">Log in</a></li>
-              <li><a class="nav link-empty" href="/">Sign up</a></li>
+              <li><a class="first" href="#">Generate QR Codes</a></li>
+              <li><a class="second" href="#">Pricing</a></li>
+              <li><a class="third underline" href="/">Log in</a></li>
+              <li><a class="fourth nav link-empty" href="/">Sign up</a></li>
             </ul>
           </nav>
 
@@ -65,11 +65,27 @@
 
     <main>
       <section class="hero">
-        <div class="text-block">
-          <h1><span class="text-orange">Strikingly fast</span> QR codes.</h1>
-        </div>
-        <div class="img-block">
-          <img src="/home/qr-code-purchase.png" id="hero-img" alt="hero-img" />
+        <div class="container">
+          <div class="text-block">
+            <div class="text-wrapper">
+              <h1><span class="text-orange">Strikingly fast</span> QR codes.</h1>
+
+              <p>You are one Bolt away from never being too slow again</p>
+
+              <div class="btn-wrapper">
+                <a class="link-fill" href="/">Generate QR Codes</a>
+                <a class="link-empty" href="/">Sign up</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="img-block">
+            <img src="./home/qr-code-purchase.svg" alt="human" id="human-scan" />
+            <div class="qr-code-container">
+              <img src="./home/qr-code-wrapper.svg" id="qr-code-wrapper" alt="qr-code-wrapper" />
+              <img src="./home/qr-code.svg" alt="qr-code" />
+            </div>
+          </div>
         </div>
       </section>
     </main>
