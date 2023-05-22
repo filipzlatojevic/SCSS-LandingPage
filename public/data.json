@@ -1,0 +1,82 @@
+{
+  "features": [
+    {
+      "title": "QR templates",
+      "desc": "You get 13 built-in QR code templates to get you started right away."
+    },
+    {
+      "title": "Privacy",
+      "desc": "We do not store any data of your created QR codes, except the ones that you save in your account willingly."
+    },
+    {
+      "title": "Highly customizable",
+      "desc": "Create the QR code you need, brand it with your own colors & logo."
+    },
+    {
+      "title": "Tracking pixels",
+      "desc": "Facebook, Google Analytics, Google Tag Manager, LinkedIn, Pinterest, Twitter, Quora tracking pixels available."
+    },
+    {
+      "title": "Projects ",
+      "desc": "Easiest way to categorize your managed resources."
+    },
+    {
+      "title": "Custom domains",
+      "desc": "Connect your own domain or use our predefined ones."
+    }
+  ],
+  "types": [
+    {
+      "title": "Text",
+      "desc": "Generate easy & customizable Text QR codes in minutes."
+    },
+    {
+      "title": "URL",
+      "desc": "Generate easy & customizable Text QR codes in minutes."
+    },
+    {
+      "title": "Phone",
+      "desc": "Get calls from people by scaning the QR code"
+    },
+    {
+      "title": "SMS",
+      "desc": "Get custom SMS from people by scaning the QR code"
+    },
+    {
+      "title": "Email",
+      "desc": "Get custom email from people by scaning the QR code"
+    },
+    {
+      "title": "Whatsapp",
+      "desc": "Get custom Whatsapp messages from people by scaning the QR code"
+    },
+    {
+      "title": "Facetime",
+      "desc": "Get Facetime calls from people by scaning the QR code"
+    },
+    {
+      "title": "Location",
+      "desc": "Embed location coordinates for people to get directions more easily"
+    },
+    {
+      "title": "WiFi",
+      "desc": "Create WiFi QR codes and let people conect to your WiFi more easly"
+    },
+    {
+      "title": "Event",
+      "desc": "Generate a custom life calendar event and embed it into a QR code  "
+    },
+    {
+      "title": "Crypto",
+      "desc": "Get paid in crypto from people by scaning the QR code"
+    },
+    {
+      "title": "Vcard",
+      "desc": "Embed your contact data into a digital bussines card"
+    },
+    {
+      "title": "PayPal",
+      "desc": "Create PayPal direct payment links"
+    }
+  ]
+}

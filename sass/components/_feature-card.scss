@@ -4,12 +4,13 @@
   flex-direction: column;
   gap: 8px;
   position: relative;
+  padding: 20px;
+  max-width: 320px;
 
   img {
     position: absolute;
     top: 0;
     left: 0;
-    transform: translate(50%, 50%);
     width: 18px;
     height: 18px;
   }
@@ -17,5 +18,36 @@
   span {
     font-family: 'Comfortaa', cursive;
     color: var(--text-heading);
+    font-size: 22;
+    font-weight: 700;
   }
 }
+
+@media (max-width: 1440px) {
+  .feature-card {
+    max-width: 260px;
+    span {
+      font-size: 20;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+// @media (max-width: 1024px) {
+//   .feature-card {
+//     span {
+//       font-size: 20;
+//     }
+//   }
+// }
+
+// @media (max-width: 450px) {
+//   .feature-card {
+//     span {
+//       font-size: 20;
+//     }
+//   }
+// }
