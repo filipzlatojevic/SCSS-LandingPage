@@ -12,11 +12,9 @@ async function fetchData(type, callback, destination) {
     const res = await fetch('./data.json');
     const data = await res.json();
 
-    console.log(data[type][0]['desc']);
-
-    for (let feat of data[type]) {
-      const item = callback(feat);
-      destination.appendChild(item);
+    for (let item of data[type]) {
+      const el = callback(item);
+      destination.appendChild(el);
     }
   } catch (error) {
     console.log(error);
@@ -58,3 +56,14 @@ function createCard({ title, desc }) {
 }
 
 window.onload = fetchData('types', createCard, qrTypesContainer);
+
+// pricing
+const pricingCardLists = document.querySelectorAll('.pricing-card ul');
+
+pricingCardLists.forEach(ul => {
+  for (let i = 0; i < 12; i++) {
+    const li = document.createElement('li');
+    li.innerText = '4 QR code types ';
+    ul.appendChild(li);
+  }
+});

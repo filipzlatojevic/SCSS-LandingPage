@@ -1,0 +1,71 @@
+@import '../components/pricing-card';
+
+.pricing {
+  background: var(--bg-secondary);
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  div.btn-wrapper {
+    display: flex;
+    justify-content: end;
+    gap: 32px;
+
+    button {
+      width: 200px;
+      height: 51px;
+    }
+  }
+}
+
+#pricing-container {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+@media (max-width: 1440px) {
+  .pricing {
+    padding-top: 13px;
+    padding-bottom: 13px;
+
+    div.btn-wrapper {
+      gap: 22px;
+    }
+  }
+
+  #pricing-container {
+    // overflow-x: scroll;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .pricing {
+    padding-top: 33px;
+    padding-bottom: 33px;
+
+    div.btn-wrapper {
+      margin-top: 25px;
+      gap: 16px;
+
+      button {
+        max-width: 144px;
+        height: 36px;
+      }
+    }
+  }
+
+  #pricing-container {
+    margin-top: 80px;
+    gap: 16px;
+  }
+}
+
+// @media (max-width: 768px) {
+//   #pricing-container {
+//     gap: 18px;
+//     justify-items: center;
+//     grid-template-columns: repeat(1, minmax(0, 1fr));
+//   }
+// }

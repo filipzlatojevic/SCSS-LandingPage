@@ -1,0 +1,157 @@
+.pricing-card {
+  background: $inactive-gradient-orange;
+  width: 100%;
+  max-width: 316px;
+  min-width: 290px;
+  padding: 27px 40px 37px;
+  border-radius: 15px;
+  transition: all 150ms ease-out;
+  position: relative;
+
+  span {
+    font-family: 'Comfortaa';
+    font-size: 18px;
+    line-height: 22px;
+    color: $black-200;
+    position: relative;
+
+    &::after {
+      content: '';
+      width: 100%;
+      height: 2px;
+      border-radius: 2px;
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      background: $black-400;
+    }
+  }
+
+  .title {
+    margin-top: 23px;
+    margin-bottom: 11px;
+    font-weight: 700;
+    font-size: 43.95px;
+    line-height: 53px;
+    font-family: 'Comfortaa';
+    color: $black-200;
+  }
+
+  ul {
+    margin-bottom: 37px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    gap: 16px;
+
+    li {
+      font-size: 18px;
+      line-height: 21px;
+      color: $black-300;
+    }
+  }
+
+  button.btn {
+    width: 100%;
+    height: 55px;
+    color: $gray-400;
+  }
+
+  &:hover {
+    transform: scale(104%);
+    z-index: 999;
+  }
+}
+
+.guest ul {
+  li {
+    text-decoration: line-through;
+    font-weight: 300;
+
+    &:first-of-type {
+      text-decoration: none;
+      font-weight: 400;
+    }
+  }
+}
+
+.pro span {
+  text-decoration-color: $gray-400;
+}
+
+.pro {
+  background: $active-gradient-orange;
+  position: relative;
+
+  .behind {
+    width: 100%;
+    z-index: -1;
+    // height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .behind .beh {
+    content: 'Most popular plan';
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    padding-top: 16px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    top: 0;
+    left: 50%;
+    width: 80%;
+    height: 51px;
+    background: $active-gradient-orange;
+    border-radius: 15px 15px 0 0;
+    z-index: -999;
+    transform: translate(-50%, -65%);
+    transition: transform 150ms ease-out;
+  }
+
+  &:hover .behind .beh {
+    transform: translate(-50%, 0);
+  }
+}
+
+@media (max-width: 1024px) {
+  .pricing-card {
+    padding: 30px 15px 20px;
+    min-width: 226px;
+
+    span {
+      font-size: 14px;
+      line-height: 17px;
+
+      &::after {
+        height: 1px;
+        border-radius: 1px;
+      }
+    }
+
+    .title {
+      margin-top: 20px;
+      margin-bottom: 8px;
+    }
+
+    ul {
+      margin-bottom: 32px;
+      gap: 8px;
+
+      li {
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
+
+    button.btn {
+      height: 47px;
+    }
+  }
+}
