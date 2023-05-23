@@ -1,5 +1,6 @@
 @import '../components/header/header';
 @import '../components/section-heading';
+@import '../components/footer/footer';
 
 @import '../sections/hero';
 @import '../sections/dynamic-static-qr';
@@ -9,4 +10,5 @@
 
 body {
   background-color: var(--bg);
+  min-height: 100vh;
 }
