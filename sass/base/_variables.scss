@@ -2,6 +2,7 @@
 $black-200: #2d2d2d;
 $black-300: #666666;
 $black-400: #999898;
+$gray-100: #505050;
 $gray-200: #d7d7d7;
 $gray-300: #e6e6e6;
 $gray-400: #fafafa;
@@ -16,6 +17,7 @@ $white-100: #ffffff;
   --bg: #fafafa;
   --bg-secondary: #d7d7d733;
   --bg-orange: #ffb76991;
+  --bg-sign-up-in: #ffcf9b19;
 }
 
 .dark {
@@ -23,21 +25,12 @@ $white-100: #ffffff;
   --text-heading: #fafafa;
   --bg: #2d2d2d;
   --bg-secondary: #66666633;
+  --bg-sign-up-in: #505050;
 }
 
 // gradients
 $active-gradient-orange: linear-gradient(180deg, #ffb769 17.19%, #ffffff 100%);
 $inactive-gradient-orange: linear-gradient(167.91deg, #ffd6c4 -1.62%, #ffffff 104.93%);
-
-// maps
-$btn-pxs: (
-  '47': 47px,
-  '51': 51px,
-  '55': 55px,
-  '117': 117px,
-  '200': 200px,
-  '233': 233px,
-);
 
 // MIXINS
 // flexbox
@@ -61,7 +54,6 @@ $btn-pxs: (
 }
 
 // classes
-// controll the max width of all sections. For large screens...
 .inner-section {
   width: 100%;
   max-width: 1800px;
@@ -147,16 +139,16 @@ $btn-pxs: (
 @keyframes levitate {
   0%,
   100% {
-    transform: translateY(0);
+    transform: translateY(-7%);
   }
 
   40%,
   80% {
-    transform: translateY(-5%);
+    transform: translateY(-7%);
   }
 
   20%,
   60% {
-    transform: translateY(5%);
+    transform: translateY(7%);
   }
 }

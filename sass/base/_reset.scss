@@ -146,6 +146,10 @@ html {
   font-family: 'Roboto', sans-serif;
 }
 
+main {
+  min-height: 100vh;
+}
+
 h1 {
   font-size: clamp(53px, 5vw, 68.66px);
 }
