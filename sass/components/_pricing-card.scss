@@ -81,15 +81,22 @@
 
 .pro {
   background: $active-gradient-orange;
+}
 
-  // z-index: 999;
-  // &:hover .pro-behind {
-  //   transform: translate(-50%, 0);
-  // }
+.pro-card-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 316px;
+  min-width: 290px;
+
+  &:hover {
+    .pro-behind {
+      transform: translate(-50%, 0);
+    }
+  }
 }
 
 .pro-behind {
-  // content: 'Most popular plan';
   position: absolute;
   display: flex;
   justify-content: center;
@@ -98,18 +105,23 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 19px;
+  color: $black-300;
   top: 0;
   left: 50%;
   width: 80%;
   height: 51px;
   background: $active-gradient-orange;
   border-radius: 15px 15px 0 0;
-  z-index: -999;
-  transform: translate(-50%, -65%);
-  // transition: transform 150ms ease-out;
+  transform: translate(-50%, -70%);
+  z-index: -1;
+  transition: all 150ms ease-out;
 }
 
 @media (max-width: 1024px) {
+  .pro-card-wrapper {
+    min-width: 226px;
+  }
+
   .pricing-card {
     padding: 30px 15px 20px;
     min-width: 226px;

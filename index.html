@@ -36,8 +36,8 @@
             <div class="helper"></div>
             <ul>
               <li><a class="first" href="#">Generate QR Codes</a></li>
-              <li><a class="second" href="#">Pricing</a></li>
-              <li><a class="third underline" href="/">Log in</a></li>
+              <li><a class="second" href="#pricing">Pricing</a></li>
+              <li><a class="third underline" href="/log-in.html">Log in</a></li>
               <li><a class="fourth nav link-empty" href="/sign-up.html">Sign up</a></li>
             </ul>
           </nav>
@@ -75,7 +75,7 @@
 
                 <div class="btn-wrapper">
                   <a class="btn" href="#"> Generate QR Codes</a>
-                  <a class="link-empty" href="/sign-up">Sign up</a>
+                  <a class="link-empty" href="/sign-up.html">Sign up</a>
                 </div>
               </div>
             </div>
@@ -213,7 +213,7 @@
       <section class="pricing">
         <section class="inner-section">
           <div class="section-heading">
-            <h2>Simple, transparent pricing.</h2>
+            <h2 id="pricing">Simple, transparent pricing.</h2>
             <p>
               Not sure if you need Bolt? You can sign up for your free guest account to try Bolt out.<br /><br />
               If you decide that Bolt could be useful and that you need something more advanced choose the plan that is
@@ -241,12 +241,14 @@
               <button class="btn">Choose plan</button>
             </div>
 
-            <div class="pricing-card pro">
-              <span>PERSONAL PRO</span>
-              <div class="title">$5</div>
-              <ul></ul>
-              <button class="btn">Choose plan</button>
-              <div class="pro-behind"></div>
+            <div class="pro-card-wrapper">
+              <div class="pro-behind">Most popular plan</div>
+              <div class="pricing-card pro">
+                <span>PERSONAL PRO</span>
+                <div class="title">$5</div>
+                <ul></ul>
+                <button class="btn">Choose plan</button>
+              </div>
             </div>
 
             <div class="pricing-card business">
@@ -260,7 +262,65 @@
       </section>
     </main>
 
-    <footer>futer</footer>
+    <footer>
+      <div class="footer-container">
+        <div class="left">
+          <div class="social-icons">
+            <a href="https://taraba.org/">
+              <img src="/footer/taraba-logo-latin-full-color-white 1.svg" alt="logo" />
+            </a>
+
+            <div class="icons-wrapper">
+              <img src="/footer/linked-in-large.svg" alt="linkedin" />
+              <img src="/footer/instagram-large.svg" alt="instagram" />
+              <img src="/footer/you-tube-large.svg" alt="youtube" />
+              <img src="/footer/facebook-large.svg" alt="facebook" />
+            </div>
+
+            <span>Copyright © 2022 Taraba. All rights reserved.</span>
+          </div>
+
+          <div class="terms">
+            <span>Quick links</span>
+
+            <a href="#">Generate QR codes</a>
+
+            <a href="/#pricing">Pricing</a>
+
+            <div>
+              <a class="underline" href="#">Terms and Conditions</a>
+              <a class="underline" href="#">Privacy Policy</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="right">
+          <h3>Our family</h3>
+
+          <div class="family-wrapper">
+            <div class="one">
+              <a href="https://taraba.tech/#home" class="logo-wrapper">
+                <img src="/footer/trb-tech-logo-solid-white (1) 1.svg" alt="taraba-tech" />
+              </a>
+
+              <a href="https://taraba.education/" class="logo-wrapper">
+                <img src="/footer/trb-edu-logo-solid-white.svg" alt="taraba-edu" />
+              </a>
+            </div>
+
+            <div class="one">
+              <a href="https://taraba.rs/" class="logo-wrapper">
+                <img src="/footer/portal-logo-lat-solid-white 1.svg" alt="taraba-portal" />
+              </a>
+
+              <a href="https://oakly.events/" class="logo-wrapper">
+                <img src="/footer/oakly-logo-full-color 9.svg" alt="oakly" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <script type="module" src="/darkmode.js"></script>
     <script type="module" src="/main.js"></script>
