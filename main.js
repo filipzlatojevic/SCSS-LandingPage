@@ -1,5 +1,8 @@
 import './darkmode';
 import './formHandle';
+import './signin';
+import './activation';
+import './lost-password';
 
 const burger = document.querySelector('.burger');
 const nav = document.querySelector('.nav-wrapper nav');
@@ -24,7 +27,7 @@ async function fetchData(type, callback, destination) {
   }
 }
 
-// features
+// features section
 const featuresContainer = document.querySelector('#features-container');
 
 function createFeature({ title, desc }) {
@@ -40,7 +43,7 @@ function createFeature({ title, desc }) {
 
 window.onload = fetchData('features', createFeature, featuresContainer);
 
-// qr-types
+// qr-types section
 const qrTypesContainer = document.querySelector('#qr-types-container');
 
 function createCard({ title, desc }) {
@@ -60,13 +63,13 @@ function createCard({ title, desc }) {
 
 window.onload = fetchData('types', createCard, qrTypesContainer);
 
-// pricing
+// pricing section
 const pricingCardLists = document.querySelectorAll('.pricing-card ul');
 
 pricingCardLists.forEach(ul => {
   for (let i = 0; i < 12; i++) {
     const li = document.createElement('li');
-    li.innerText = '4 QR code types ';
+    li.innerText = '4 QR code types';
     ul.appendChild(li);
   }
 });

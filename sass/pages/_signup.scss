@@ -1,1 +1,7 @@
+.checkbox-wrapper.error {
+  color: $red-100 !important;
 
+  input[type='checkbox'] {
+    border: 2px solid $red-100 !important;
+  }
+}

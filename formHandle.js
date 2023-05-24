@@ -1,19 +1,30 @@
-const form = document.querySelector('form#sign-up');
-const inputs = form?.querySelectorAll('input');
-const inputValues = new Map();
+const signUpForm = document.querySelector('form#sign-up');
+const signUpInputs = signUpForm?.querySelectorAll('input');
+const signUpCheckboxWrapper = signUpForm?.querySelector('.checkbox-wrapper');
 
-inputs?.forEach(input => {
+const inputValues = new Map();
+let termsChecked = false;
+
+signUpInputs?.forEach(input => {
   input.addEventListener('change', () => {
     if (input.name === 'terms-checkbox') {
       inputValues.set(input.name, input.checked);
+      if (input.checked) {
+        termsChecked = true;
+        signUpCheckboxWrapper.classList.remove('error');
+      } else {
+        termsChecked = false;
+        signUpCheckboxWrapper.classList.add('error');
+      }
     } else {
       inputValues.set(input.name, input.value);
     }
   });
 });
 
-form?.addEventListener('submit', e => {
+signUpForm?.addEventListener('submit', e => {
   e.preventDefault();
+  // TODO once API is done, handle pending, resolve and reject.
 
   if (
     inputValues.size >= 3 &&
@@ -22,10 +33,20 @@ form?.addEventListener('submit', e => {
     inputValues.get('password') &&
     inputValues.get('terms-checkbox')
   ) {
-    console.log('Submited succesfuly');
+    alert(
+      `Succesfull created account. ${inputValues.get(
+        'name'
+      )}, the verivfication link are sent to your email addres (${inputValues.get(
+        'email'
+      )}), please verificate your account.`
+    );
 
-    console.log(inputValues.get('name'));
-
-    alert(`Succesfull. Name: ${inputValues.get('name')}`);
+    setTimeout(() => {
+      window.location.href = '/sign-in.html';
+    }, 1000);
+  } else if (!termsChecked) {
+    signUpCheckboxWrapper.classList.add('error');
+  } else {
+    console.log('something went wrong, try again.');
   }
 });

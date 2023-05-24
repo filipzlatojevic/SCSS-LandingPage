@@ -1,5 +1,4 @@
 import { defineConfig } from 'vite';
-import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig({
   build: {
@@ -7,6 +6,9 @@ export default defineConfig({
       input: {
         main: './index.html',
         signup: './sign-up.html',
+        signin: './sign-in.html',
+        activation: './activation.html',
+        lost_password: './lost-password.html',
       },
     },
   },
