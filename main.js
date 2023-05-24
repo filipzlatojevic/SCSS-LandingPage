@@ -1,3 +1,6 @@
+import './darkmode';
+import './formHandle';
+
 const burger = document.querySelector('.burger');
 const nav = document.querySelector('.nav-wrapper nav');
 
@@ -14,7 +17,7 @@ async function fetchData(type, callback, destination) {
 
     for (let item of data[type]) {
       const el = callback(item);
-      destination.appendChild(el);
+      destination?.appendChild(el);
     }
   } catch (error) {
     console.log(error);

@@ -7,8 +7,8 @@ if (darkMode === 'enabled') {
 }
 
 themeBtn.addEventListener('click', () => {
-  trans();
   darkMode = localStorage.getItem('darkMode');
+  trans();
   if (darkMode !== 'enabled') {
     enableDarkMode();
   } else {

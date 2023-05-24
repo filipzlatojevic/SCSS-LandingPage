@@ -202,6 +202,10 @@ section {
   padding: 0 40px;
 }
 
+div {
+  color: var(--text);
+}
+
 @media (max-width: 1024px) {
   html {
     font-size: 14px;

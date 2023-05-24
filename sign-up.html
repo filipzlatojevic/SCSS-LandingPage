@@ -64,7 +64,38 @@
       </div>
     </header>
 
-    <main></main>
+    <main>
+      <section class="sign-up-in-layout">
+        <div class="text-container">
+          <h2>Sign Up</h2>
+          <p>Welcome to Bolt account creation. Enjoy all the benefits it offers.</p>
+
+          <form id="sign-up">
+            <div class="inputs-container">
+              <input type="text" name="name" id="name" placeholder="Your name*" />
+              <input type="email" name="email" id="email" placeholder="Your email*" />
+              <input type="password" name="password" id="password" placeholder="Your password*" />
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" name="terms-checkbox" id="terms-checkbox" />
+              <label for="terms-checkbox"
+                >Please confirm that you have read and understood the Terms and Conditions and Privacy Policy of the
+                site.*</label
+              >
+            </div>
+            <button class="btn" type="submit">Create account</button>
+          </form>
+
+          <div class="bottom-links">
+            <div>If you all ready have account, please <a class="underline" href="/log-in.html">Log in</a></div>
+          </div>
+        </div>
+
+        <div class="img-container">
+          <img src="/sign-up/sign-up-illustration.png" alt="ilustration" />
+        </div>
+      </section>
+    </main>
 
     <footer>
       <div class="footer-container">
@@ -126,7 +157,6 @@
       </div>
     </footer>
 
-    <script type="module" src="/darkmode.js"></script>
     <script type="module" src="/main.js"></script>
   </body>
 </html>

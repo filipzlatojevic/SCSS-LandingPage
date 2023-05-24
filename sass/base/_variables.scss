@@ -129,11 +129,190 @@ $inactive-gradient-orange: linear-gradient(167.91deg, #ffd6c4 -1.62%, #ffffff 10
   fill: currentColor;
 }
 
+// sign-up and sign-in layout
+.sign-up-in-layout {
+  padding-top: 145px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+
+  .text-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    gap: 16px;
+
+    h2 {
+      font-weight: 900;
+      font-size: 43.95px;
+      line-height: 53px;
+      color: $orange-100;
+    }
+
+    p {
+      margin-bottom: 16px;
+    }
+
+    form {
+      width: 100%;
+      max-width: 560px;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: space-between;
+      gap: 24px;
+
+      .inputs-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 24px;
+
+        input {
+          height: 51px;
+          width: 100%;
+          position: relative;
+          border-radius: 15px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding-left: 17px;
+          border: 1px solid $gray-100;
+
+          &::placeholder {
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 22px;
+            color: $black-200;
+          }
+        }
+      }
+
+      .checkbox-wrapper {
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        gap: 6px;
+
+        input[type='checkbox'] {
+          width: 29px;
+          height: 29px;
+          border-radius: 5px;
+          border: 2px solid $black-200;
+          accent-color: $orange-100;
+        }
+
+        label {
+          font-size: 14px;
+          line-height: 16px;
+          color: var(--text);
+        }
+      }
+
+      button {
+        width: 198px;
+        height: 47px;
+        margin-bottom: 10px;
+      }
+    }
+
+    .bottom-links {
+      div {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        justify-content: start;
+        font-size: 18px;
+        line-height: 21px;
+      }
+    }
+  }
+
+  .img-container {
+    flex: 1;
+
+    img {
+      width: 100%;
+      max-width: 850px;
+    }
+  }
+}
+
 @media (max-width: 1024px) {
+  .sign-up-in-layout {
+    padding-top: 100px;
+    gap: 50px;
+
+    .text-container {
+      gap: 7px;
+
+      h2 {
+        font-size: 34.18px;
+        line-height: 42px;
+      }
+
+      form {
+        max-width: 390px;
+        gap: 16px;
+
+        .inputs-container {
+          gap: 16px;
+
+          input {
+            height: 47px;
+
+            &::placeholder {
+              font-size: 14px;
+              line-height: 17px;
+            }
+          }
+        }
+      }
+
+      .bottom-links {
+        div {
+          font-size: 14px;
+          line-height: 16px;
+        }
+      }
+    }
+
+    .img-container {
+      flex: 1;
+    }
+  }
+
   .btn::after {
     height: 40px;
   }
 }
+
+@media (max-width: 768px) {
+  .sign-up-in-layout {
+    padding-top: 80px;
+
+    .text-container {
+      form {
+        max-width: 500px;
+      }
+    }
+
+    .img-container {
+      display: none;
+    }
+  }
+}
+
+// @media (max-width: 450px) {
+//   .btn::after {
+//     height: 40px;
+//   }
+// }
 
 // animation keyframes
 @keyframes levitate {
