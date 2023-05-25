@@ -23,14 +23,18 @@ lostPasswordForm?.addEventListener('submit', e => {
 
     async function simulateError() {
       if (Math.random() < 0.5) {
+        btn.innerHTML = 'Loading...';
         await delay(500);
         paragraph.innerHTML = 'We will send you an email with a magic recovery link to reset your password.';
         paragraph.classList.remove('error');
         btn.innerHTML = 'Done!';
+        btn.style = 'filter: brightness(110%);';
       } else {
+        btn.innerHTML = 'Loading...';
         await delay(500);
         paragraph.classList.add('error');
         paragraph.innerHTML = "Sorry, something went wrong. We couldn't send you the link. Please try again.";
+        btn.innerHTML = 'Send activation';
         btn.disabled = false;
       }
     }

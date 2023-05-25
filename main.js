@@ -1,8 +1,10 @@
-import './darkmode';
-import './formHandle';
-import './signin';
-import './activation';
-import './lost-password';
+import './utils/darkmode';
+import './utils/formHandle';
+import './utils/slider';
+
+import './pages/signin';
+import './pages/activation';
+import './pages/lost-password';
 
 const burger = document.querySelector('.burger');
 const nav = document.querySelector('.nav-wrapper nav');

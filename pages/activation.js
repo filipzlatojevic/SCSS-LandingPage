@@ -23,14 +23,18 @@ activationForm?.addEventListener('submit', e => {
 
     async function simulateError() {
       if (Math.random() < 0.5) {
+        btn.innerHTML = 'Loading...';
         await delay(500);
         paragraph.innerHTML = 'Mails can get lost, but we can send you another activation email for your account.';
         paragraph.classList.remove('error');
         btn.innerHTML = 'Done!';
+        btn.style = 'filter: brightness(110%);';
       } else {
+        btn.innerHTML = 'Loading...';
         await delay(500);
         paragraph.classList.add('error');
         paragraph.innerHTML = "Sorry, something went wrong. We couldn't send you the link. Please try again.";
+        btn.innerHTML = 'Send me link';
         btn.disabled = false;
       }
     }

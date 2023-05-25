@@ -1,0 +1,81 @@
+.pricing-container-wrapper {
+  margin-top: 100px;
+  .prev,
+  .next {
+    height: 47px;
+    width: 70px;
+  }
+}
+
+#pricing-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  position: relative;
+}
+
+@media (max-width: 1440px) {
+  .pricing-container-wrapper {
+    margin-top: 80px;
+    #pricing-container {
+      padding: 50px 0px;
+      gap: 10px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .pricing-container-wrapper {
+    #pricing-container {
+      white-space: nowrap;
+      display: block;
+      overflow: hidden;
+      cursor: grab;
+      &:active {
+        cursor: grabbing;
+      }
+
+      .pro-card-wrapper {
+        display: inline-block;
+        width: calc(100% / 2);
+        margin-left: 10px;
+        .pricing-card {
+          width: 100%;
+          margin-left: 0;
+        }
+      }
+
+      .pricing-card {
+        display: inline-block;
+        width: calc(100% / 2);
+        margin-left: 10px;
+
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .pricing-container-wrapper {
+    #pricing-container {
+      padding: 36px 8px 10px;
+
+      .pro-card-wrapper {
+        width: 75%;
+        min-width: none;
+        .pricing-card {
+          min-width: none;
+          width: 100%;
+        }
+      }
+
+      .pricing-card {
+        padding: 15px 15px 10px;
+        width: 75%;
+      }
+    }
+  }
+}

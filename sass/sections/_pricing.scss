@@ -1,4 +1,5 @@
 @import '../components/pricing-card';
+@import '../components/slider';
 
 .pricing {
   background: var(--bg-secondary);
@@ -17,14 +18,6 @@
   }
 }
 
-#pricing-container {
-  margin-top: 100px;
-  display: flex;
-  justify-content: space-between;
-  gap: 32px;
-  position: relative;
-}
-
 @media (max-width: 1440px) {
   .pricing {
     padding-top: 23px;
@@ -33,11 +26,6 @@
     div.btn-wrapper {
       gap: 22px;
     }
-  }
-
-  #pricing-container {
-    // overflow-x: scroll;
-    gap: 24px;
   }
 }
 
@@ -55,11 +43,6 @@
         height: 36px;
       }
     }
-  }
-
-  #pricing-container {
-    margin-top: 80px;
-    gap: 16px;
   }
 }
 
