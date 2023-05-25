@@ -7,8 +7,3 @@
 @import '../sections/_features.scss';
 @import '../sections/qr-types';
 @import '../sections/pricing';
-
-body {
-  background-color: var(--bg);
-  min-height: 100vh;
-}

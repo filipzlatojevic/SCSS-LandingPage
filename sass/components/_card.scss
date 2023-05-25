@@ -1,3 +1,23 @@
+.card-type-wrapper {
+  position: relative;
+
+  &::after {
+    content: '';
+    width: 85%;
+    height: 55px;
+    position: absolute;
+    z-index: -1;
+    left: 9.81%;
+    right: 9.81%;
+    top: 81.59%;
+    bottom: 0%;
+    background: #913c00;
+    opacity: 0.25;
+    filter: blur(20px);
+    border-radius: 15px;
+  }
+}
+
 .card {
   background: $white-100;
   display: flex;
@@ -9,7 +29,12 @@
   min-height: 263px;
   padding: 30px;
   border-radius: 15px;
-  position: relative;
+  transition: transform 500ms ease;
+
+  &:hover {
+    transform: scale(107%);
+    transition: transform 150ms ease-out;
+  }
 
   div {
     display: flex;
@@ -36,22 +61,6 @@
   p {
     color: $black-200;
   }
-
-  &::after {
-    content: '';
-    width: 85%;
-    height: 55px;
-    position: absolute;
-    z-index: -1;
-    left: 9.81%;
-    right: 9.81%;
-    top: 81.59%;
-    bottom: 0%;
-    background: #913c00;
-    opacity: 0.25;
-    filter: blur(20px);
-    border-radius: 15px;
-  }
 }
 
 @media (max-width: 1440px) {
@@ -76,12 +85,6 @@
     p {
       line-height: 16px;
       font-size: 14px;
-    }
-
-    &::after {
-      left: 9.73%;
-      right: 9.73%;
-      top: 72.22%;
     }
   }
 }

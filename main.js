@@ -8,6 +8,11 @@ import './pages/lost-password';
 
 const burger = document.querySelector('.burger');
 const nav = document.querySelector('.nav-wrapper nav');
+const preloader = document.querySelector('#preloader');
+
+window.addEventListener('load', () => {
+  preloader.style.display = 'none';
+});
 
 burger.addEventListener('click', () => {
   nav.classList.toggle('active');
@@ -50,15 +55,17 @@ const qrTypesContainer = document.querySelector('#qr-types-container');
 
 function createCard({ title, desc }) {
   const card = document.createElement('div');
-  card.classList.add('card');
+  card.classList.add('card-type-wrapper');
   let src = title.toLowerCase();
 
   card.innerHTML = `
+  <div class="card">
   <div>
     <img src="./home/qr_code_types_icons/${src}.svg" />
     <span>${title}</span>
   </div>
   <p>${desc}</p>
+  </div>
   `;
   return card;
 }

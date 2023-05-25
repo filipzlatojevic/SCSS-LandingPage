@@ -18,11 +18,11 @@ header {
 .header-container {
   width: 100%;
   height: 145px;
-  max-width: 1800px; // po slobodnom nahodjenju sam ogranicio dalji rast u sirini na vecim ekranima
+  max-width: 1800px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 40px;
+  padding: 0 0px;
   margin: auto;
 
   .logo {
@@ -37,6 +37,12 @@ header {
     &:hover {
       filter: brightness(1.5);
     }
+  }
+}
+
+@media (max-width: 1850px) {
+  .header-container {
+    padding: 0 40px;
   }
 }
 
