@@ -59,7 +59,7 @@
   }
 
   &:hover {
-    transform: scale(104%);
+    transform: scale(103%);
     transition: transform 150ms ease-out;
   }
 }
@@ -156,5 +156,11 @@
     button.btn {
       height: 47px;
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .pro-behind {
+    display: none;
   }
 }
