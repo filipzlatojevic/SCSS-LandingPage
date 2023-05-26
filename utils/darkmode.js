@@ -8,7 +8,7 @@ if (darkMode === 'enabled') {
 
 themeBtn.addEventListener('click', () => {
   darkMode = localStorage.getItem('darkMode');
-  trans();
+  // trans();
   if (darkMode !== 'enabled') {
     enableDarkMode();
   } else {
@@ -27,15 +27,15 @@ function disableDarkMode() {
 }
 
 // function for transition theme changing
-function trans() {
-  if (!isMobileDevice()) {
-    document.documentElement.classList.add('transition');
-    window.setTimeout(() => {
-      document.documentElement.classList.remove('transition');
-    }, 260);
-  }
-}
+// function trans() {
+//   if (!isMobileDevice()) {
+//     document.documentElement.classList.add('transition');
+//     window.setTimeout(() => {
+//       document.documentElement.classList.remove('transition');
+//     }, 260);
+//   }
+// }
 
-function isMobileDevice() {
-  return typeof window.orientation !== 'undefined' || navigator.userAgent.indexOf('IEMobile') !== -1;
-}
+// function isMobileDevice() {
+//   return typeof window.orientation !== 'undefined' || navigator.userAgent.indexOf('IEMobile') !== -1;
+// }

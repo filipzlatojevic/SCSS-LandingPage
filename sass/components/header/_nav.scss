@@ -36,7 +36,6 @@
       background-color: $orange-100;
       top: 40%;
       left: 50%;
-      transform: translate(-50%, -50%);
       filter: blur(14px);
       transform: translate3d(-50%, -50%, 0);
       opacity: 0;
@@ -87,14 +86,14 @@
       right: 0;
       padding: calc(77px + 60px) 20px; // pt + header height
       border-radius: 0 0 0 15px;
-      transform: translateX(100%) rotate(-20deg);
+      transform: translateX(100%) rotate(-10deg) skewX(20deg);
       transform-origin: top left;
       transition: transform 350ms ease-out;
       max-height: 595px;
 
       &.active {
-        transform: translateX(0) rotate(0);
-        transition: transform 250ms ease-out;
+        transform: translateX(0) rotate(0) skewX(0);
+        transition: transform 220ms ease-out;
 
         ul {
           li {
@@ -102,16 +101,16 @@
           }
 
           li:nth-child(1) {
-            transition-delay: 50ms;
+            transition-delay: 70ms;
           }
           li:nth-child(2) {
-            transition-delay: 200ms;
+            transition-delay: 140ms;
           }
           li:nth-child(3) {
-            transition-delay: 350ms;
+            transition-delay: 310ms;
           }
           li:nth-child(4) {
-            transition-delay: 500ms;
+            transition-delay: 380ms;
           }
         }
       }
@@ -139,9 +138,15 @@
     #theme-toggle {
       margin: 0;
       position: absolute;
-      right: 60px;
+      right: 65px;
       top: 30px;
       transform: translateY(-50%);
+
+      &::after {
+        width: 22px;
+        height: 22px;
+        filter: blur(9px);
+      }
     }
   }
 }
