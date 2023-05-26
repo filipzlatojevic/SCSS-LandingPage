@@ -28,8 +28,14 @@ function disableDarkMode() {
 
 // function for transition theme changing
 function trans() {
-  document.documentElement.classList.add('transition');
-  window.setTimeout(() => {
-    document.documentElement.classList.remove('transition');
-  }, 260);
+  if (!isMobileDevice()) {
+    document.documentElement.classList.add('transition');
+    window.setTimeout(() => {
+      document.documentElement.classList.remove('transition');
+    }, 260);
+  }
+}
+
+function isMobileDevice() {
+  return typeof window.orientation !== 'undefined' || navigator.userAgent.indexOf('IEMobile') !== -1;
 }
