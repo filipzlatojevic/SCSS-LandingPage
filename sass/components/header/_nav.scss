@@ -38,6 +38,7 @@
       left: 50%;
       transform: translate(-50%, -50%);
       filter: blur(14px);
+      transform: translate3d(-50%, -50%, 0);
       opacity: 0;
       transition: opacity 250ms ease-out;
     }
