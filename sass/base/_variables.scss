@@ -33,32 +33,6 @@ $red-100: #ff1934;
 $active-gradient-orange: linear-gradient(180deg, #ffb769 17.19%, #ffffff 100%);
 $inactive-gradient-orange: linear-gradient(167.91deg, #ffd6c4 -1.62%, #ffffff 104.93%);
 
-// this perfectly work on chrome but not on firefox :(
-// @property --gradient-inactive {
-//   syntax: '<color>';
-//   inherits: true;
-//   initial-value: #ffd6c4;
-// }
-// @property --gradient-active {
-//   syntax: '<color>';
-//   inherits: true;
-//   initial-value: #ffb769;
-// }
-// @property --gradient-white {
-//   syntax: '<color>';
-//   inherits: true;
-//   initial-value: #ffffff;
-// }
-// .pricing-card {
-//   background: linear-gradient(167.91deg, var(--gradient-inactive) -1.62%, var(--gradient-white) 104.93%);
-//   transition: --gradient-inactive 2000ms, --gradient-white 1000ms, transform 300ms;
-
-//   &:hover {
-//     --gradient-inactive: #ffffff;
-//     --gradient-white: #ffb769;
-//   }
-// }
-
 // MIXINS
 // flexbox
 @mixin flex($direction, $position) {
