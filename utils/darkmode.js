@@ -1,5 +1,5 @@
 const themeBtn = document.querySelector('#theme-toggle');
-const html = document.querySelector('html');
+const body = document.body;
 let darkMode = localStorage.getItem('darkMode');
 
 if (darkMode === 'enabled') {
@@ -17,12 +17,12 @@ themeBtn.addEventListener('click', () => {
 });
 
 function enableDarkMode() {
-  html.classList.add('dark');
+  body.classList.add('dark');
   localStorage.setItem('darkMode', 'enabled');
 }
 
 function disableDarkMode() {
-  html.classList.remove('dark');
+  body.classList.remove('dark');
   localStorage.setItem('darkMode', '');
 }
 
