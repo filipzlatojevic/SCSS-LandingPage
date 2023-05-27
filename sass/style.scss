@@ -6,16 +6,7 @@
 @import './pages/signup';
 @import './pages/signin';
 
-// html.transition,
-// html.transition *,
-// html.transition *:before,
-// html.transition *:after {
-//   transform: translate3d(0, 0, 0);
-//   transition: color, background cubic-bezier(0.68, -0.55, 0.27, 01.55) 420ms !important;
-//   transition-delay: 0 !important;
-// }
-
-html {
+html *{
   scroll-behavior: smooth;
 }
 

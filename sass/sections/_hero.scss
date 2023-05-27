@@ -4,6 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background: var(--bg);
 
   .container {
     width: 100%;
@@ -55,7 +56,6 @@
     min-height: 217px;
     min-width: 217px;
     position: relative;
-    z-index: -1;
 
     .qr-code-container {
       position: absolute;
