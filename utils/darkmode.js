@@ -18,11 +18,13 @@ themeBtn.addEventListener('click', () => {
 
 function enableDarkMode() {
   body.classList.add('dark');
+  body.offsetWidth; // Force repaint
   localStorage.setItem('darkMode', 'enabled');
 }
 
 function disableDarkMode() {
   body.classList.remove('dark');
+  body.offsetWidth; // Force repaint
   localStorage.setItem('darkMode', '');
 }
 
