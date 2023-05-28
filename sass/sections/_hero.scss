@@ -4,7 +4,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--bg);
 
   .container {
     width: 100%;
@@ -83,8 +82,8 @@
   }
 }
 
-.dark #human-scan,
-.dark #qr-code-wrapper {
+.dark-mode #human-scan,
+.dark-mode #qr-code-wrapper {
   filter: invert(100%);
 }
 

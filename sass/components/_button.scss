@@ -2,11 +2,9 @@
   border: 2px solid $orange-100;
   border-radius: 15px;
   transition: all 250ms ease-out;
-  color: var(--text-heading);
 
   &:hover {
     background-color: $orange-100;
-    color: var(--bg);
   }
 }
 
@@ -31,15 +29,58 @@
     border-radius: 15px;
   }
 }
+
 .btn {
   border-radius: 15px;
-  color: var(--bg);
   background-color: $orange-100;
   box-shadow: inset -2px -2px 10px #ff7800;
-  transition: filter 200ms ease-out;
+  transition: all 200ms ease-out;
 
   &:hover {
-    color: var(--bg);
     filter: brightness(0.9);
   }
+}
+
+@mixin light-mode {
+  .link-empty {
+    color: $text-heading;
+
+    &:hover {
+      color: $bg;
+    }
+  }
+
+  .btn {
+    color: $bg;
+
+    &:hover {
+      color: $bg;
+    }
+  }
+}
+
+@mixin dark-mode {
+  .link-empty {
+    color: $text-heading--dark;
+
+    &:hover {
+      color: $bg--dark;
+    }
+  }
+
+  .btn {
+    color: $bg--dark;
+
+    &:hover {
+      color: $bg--dark;
+    }
+  }
+}
+
+.dark-mode {
+  @include dark-mode;
+}
+
+.light-mode {
+  @include light-mode;
 }

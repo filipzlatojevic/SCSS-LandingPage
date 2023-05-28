@@ -55,7 +55,7 @@ footer {
         font-weight: 500;
         font-size: 12px;
         line-height: 15px;
-        color: var(--text);
+        color: $text;
       }
     }
 
@@ -74,18 +74,10 @@ footer {
         font-size: 16px;
         line-height: 11px;
         font-family: 'Comfortaa', cursive;
-        color: var(--text-heading);
       }
 
       a {
-        color: var(--text);
         text-decoration: underline;
-        text-decoration-color: var(--text);
-
-        &:hover {
-          color: var(--text-heading);
-          text-decoration-color: var(--text-heading);
-        }
       }
 
       div {
@@ -153,8 +145,48 @@ footer {
   }
 }
 
-.dark footer .footer-container .left {
+.dark-mode footer .footer-container .left {
   background: $black-300;
+}
+
+@mixin dark-mode {
+  .terms span {
+    color: $text-heading--dark;
+  }
+
+  .terms a {
+    color: $text--dark;
+    text-decoration-color: $text--dark;
+
+    &:hover {
+      color: $text-heading--dark;
+      text-decoration-color: $text-heading--dark;
+    }
+  }
+}
+
+@mixin light-mode {
+  .terms span {
+    color: $text-heading;
+  }
+
+  .terms a {
+    color: $text;
+    text-decoration-color: $text;
+
+    &:hover {
+      color: $text-heading;
+      text-decoration-color: $text-heading;
+    }
+  }
+}
+
+.dark-mode {
+  @include dark-mode;
+}
+
+.light-mode {
+  @include light-mode;
 }
 
 @media (max-width: 1440px) {

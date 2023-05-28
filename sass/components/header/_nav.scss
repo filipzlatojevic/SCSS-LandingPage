@@ -3,8 +3,8 @@
   align-items: center;
 
   nav {
-    background: var(--bg);
     z-index: 50;
+    transition: background 400ms ease;
   }
 
   ul {
@@ -19,7 +19,6 @@
     margin-left: 32px;
     width: 22px;
     height: 28px;
-    color: var(--text-heading);
     position: relative;
     z-index: 50;
 
@@ -75,7 +74,7 @@
 }
 
 @media (max-width: 900px) {
-  .dark .nav-wrapper nav {
+  .dark-mode .nav-wrapper nav {
     background: $black-300;
   }
 

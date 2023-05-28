@@ -1,5 +1,4 @@
 .dynamic-static-qr {
-  background: var(--bg-secondary);
   padding-bottom: 90px;
   padding-top: 46px;
 
@@ -68,6 +67,26 @@
     border: none;
     border-radius: 15px;
   }
+}
+
+@mixin light-mode {
+  .dynamic-static-qr {
+    background: $bg-secondary;
+  }
+}
+
+@mixin dark-mode {
+  .dynamic-static-qr {
+    background: $bg-secondary--dark;
+  }
+}
+
+.dark-mode {
+  @include dark-mode;
+}
+
+.light-mode {
+  @include light-mode;
 }
 
 @media (min-width: 1440px) {

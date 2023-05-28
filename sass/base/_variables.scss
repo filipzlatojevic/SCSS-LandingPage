@@ -12,28 +12,64 @@ $orange-500: #ffb76923;
 $white-100: #ffffff;
 $red-100: #ff1934;
 
-:root {
-  --text: #666666;
-  --text-heading: #2d2d2d;
-  --bg: #fafafa;
-  --bg-secondary: #d7d7d733;
-  --bg-orange: #ffb76991;
-  --bg-sign-up-in: #ffcf9b19;
-}
+$text: #666666;
+$text--dark: #e6e6e6;
 
-.dark {
-  --text: #e6e6e6;
-  --text-heading: #fafafa;
-  --bg: #2d2d2d;
-  --bg-secondary: #66666633;
-  --bg-sign-up-in: #505050;
-}
+$text-heading: #2d2d2d;
+$text-heading--dark: #fafafa;
+
+$bg: #fafafa;
+$bg--dark: #2d2d2d;
+
+$bg-secondary: #d7d7d733;
+$bg-secondary--dark: #66666633;
+
+$bg-orange: #ffb76991;
+$bg-sign-up-in: #ffcf9b19;
+$bg-sign-up-in--dark: #505050;
 
 // gradients
 $active-gradient-orange: linear-gradient(180deg, #ffb769 17.19%, #ffffff 100%);
 $inactive-gradient-orange: linear-gradient(167.91deg, #ffd6c4 -1.62%, #ffffff 104.93%);
 
 // MIXINS
+// dark/light theme color
+@mixin dark-mode {
+  background-color: $bg--dark;
+
+  .underline {
+    color: $orange-300;
+    text-decoration-color: $orange-300;
+  }
+
+  .underline:hover {
+    color: $text-heading--dark;
+    text-decoration-color: $text-heading--dark;
+  }
+
+  input[type='checkbox'] {
+    border: 2px solid $text--dark;
+  }
+}
+
+@mixin light-mode {
+  background-color: $bg;
+
+  .underline {
+    color: $orange-300;
+    text-decoration-color: $orange-300;
+  }
+
+  .underline:hover {
+    color: $text-heading;
+    text-decoration-color: $text-heading;
+  }
+
+  input[type='checkbox'] {
+    border: 2px solid $text;
+  }
+}
+
 // flexbox
 @mixin flex($direction, $position) {
   display: flex;
@@ -55,6 +91,14 @@ $inactive-gradient-orange: linear-gradient(167.91deg, #ffd6c4 -1.62%, #ffffff 10
 }
 
 // classes
+.dark-mode {
+  @include dark-mode;
+}
+
+.light-mode {
+  @include light-mode;
+}
+
 .inner-section {
   width: 100%;
   max-width: 1800px;
@@ -66,11 +110,6 @@ $inactive-gradient-orange: linear-gradient(167.91deg, #ffd6c4 -1.62%, #ffffff 10
   color: $orange-300;
   text-decoration: underline;
   text-decoration-color: $orange-300;
-
-  &:hover {
-    color: var(--text-heading);
-    text-decoration-color: var(--text-heading);
-  }
 }
 
 .text-orange {
@@ -79,10 +118,6 @@ $inactive-gradient-orange: linear-gradient(167.91deg, #ffd6c4 -1.62%, #ffffff 10
 
 .error {
   color: $red-100 !important;
-}
-
-.icon path {
-  fill: currentColor;
 }
 
 // sign-up and sign-in layout
@@ -166,7 +201,6 @@ $inactive-gradient-orange: linear-gradient(167.91deg, #ffd6c4 -1.62%, #ffffff 10
           width: 22px;
           height: 22px;
           border-radius: 5px;
-          border: 2px solid var(--text);
           accent-color: $orange-100;
           opacity: 0.9;
           cursor: pointer;
@@ -225,7 +259,7 @@ $inactive-gradient-orange: linear-gradient(167.91deg, #ffd6c4 -1.62%, #ffffff 10
   }
 }
 
-.dark .sign-up-in-layout .img-container img {
+.dark-mode .sign-up-in-layout .img-container img {
   filter: invert(100%);
   filter: contrast(0);
 }
@@ -322,5 +356,11 @@ $inactive-gradient-orange: linear-gradient(167.91deg, #ffd6c4 -1.62%, #ffffff 10
   20%,
   60% {
     transform: translateY(7%);
+  }
+}
+
+@keyframes hiding {
+  to {
+    opacity: 0;
   }
 }

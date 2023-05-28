@@ -139,9 +139,6 @@ button {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
 }
 
 html {
@@ -153,6 +150,10 @@ main {
   min-height: 100vh;
 }
 
+body {
+  transition: background 400ms ease;
+}
+
 h1 {
   font-size: clamp(53px, 5vw, 68.66px);
 }
@@ -160,18 +161,15 @@ h1 {
 h1,
 h2 {
   font-weight: 900;
-  color: var(--text-heading);
 }
 
 h3 {
   font-weight: 700;
-  color: var(--text-heading);
   font-family: 'Comfortaa', cursive;
 }
 
 a {
   text-decoration: none;
-  color: var(--text-heading);
   font-family: 'Comfortaa', cursive;
   display: flex;
   align-items: center;
@@ -192,12 +190,7 @@ ul {
   list-style: none;
 }
 
-li {
-  color: var(--text);
-}
-
 p {
-  color: var(--text);
   line-height: 21px;
 }
 
@@ -205,8 +198,42 @@ section {
   padding: 0 40px;
 }
 
-div {
-  color: var(--text);
+@mixin dark-mode {
+  h1,
+  h2,
+  h3,
+  a {
+    color: $text-heading--dark;
+  }
+
+  li,
+  p,
+  div {
+    color: $text--dark;
+  }
+}
+
+@mixin light-mode {
+  h1,
+  h2,
+  h3,
+  a {
+    color: $text-heading;
+  }
+
+  li,
+  p,
+  div {
+    color: $text;
+  }
+}
+
+.dark-mode {
+  @include dark-mode;
+}
+
+.light-mode {
+  @include light-mode;
 }
 
 @media (max-width: 1024px) {

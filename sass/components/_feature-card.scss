@@ -17,10 +17,29 @@
 
   span {
     font-family: 'Comfortaa', cursive;
-    color: var(--text-heading);
     font-size: 22;
     font-weight: 700;
   }
+}
+
+@mixin light-mode {
+  .feature-card span {
+    color: $text-heading;
+  }
+}
+
+@mixin dark-mode {
+  .feature-card span {
+    color: $text-heading--dark;
+  }
+}
+
+.dark-mode {
+  @include dark-mode;
+}
+
+.light-mode {
+  @include light-mode;
 }
 
 @media (max-width: 1440px) {
@@ -35,19 +54,3 @@
     }
   }
 }
-
-// @media (max-width: 1024px) {
-//   .feature-card {
-//     span {
-//       font-size: 20;
-//     }
-//   }
-// }
-
-// @media (max-width: 450px) {
-//   .feature-card {
-//     span {
-//       font-size: 20;
-//     }
-//   }
-// }

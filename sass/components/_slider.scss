@@ -7,7 +7,7 @@
     width: 0;
     height: 0;
     font-size: 0;
-    color: var(--bg-secondary);
+    color: $bg-secondary;
   }
 }
 
@@ -15,6 +15,26 @@
   display: flex;
   justify-content: space-between;
   gap: 25px;
+}
+
+@mixin light-mode {
+  .pricing-container-wrapper .arrow {
+    color: $bg-secondary;
+  }
+}
+
+@mixin dark-mode {
+  .pricing-container-wrapper .arrow {
+    color: $bg-secondary--dark;
+  }
+}
+
+.dark-mode {
+  @include dark-mode;
+}
+
+.light-mode {
+  @include light-mode;
 }
 
 @media (max-width: 1440px) {
@@ -35,7 +55,7 @@
       line-height: 50px;
       width: 60px;
       height: 50px;
-      color: $gray-100;
+      color: $gray-100 !important;
       transition: transform 300ms;
       position: absolute;
       top: 50%;

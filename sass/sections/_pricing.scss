@@ -2,7 +2,6 @@
 @import '../components/slider';
 
 .pricing {
-  background: var(--bg-secondary);
   padding-top: 80px;
   padding-bottom: 80px;
 
@@ -16,6 +15,26 @@
       height: 51px;
     }
   }
+}
+
+@mixin light-mode {
+  .pricing {
+    background: $bg-secondary;
+  }
+}
+
+@mixin dark-mode {
+  .pricing {
+    background: $bg-secondary--dark;
+  }
+}
+
+.dark-mode {
+  @include dark-mode;
+}
+
+.light-mode {
+  @include light-mode;
 }
 
 @media (max-width: 1440px) {

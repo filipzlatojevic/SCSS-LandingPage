@@ -10,10 +10,18 @@ const burger = document.querySelector('.burger');
 const nav = document.querySelector('.nav-wrapper nav');
 const preloader = document.querySelector('#preloader');
 
+// preloader
 window.addEventListener('load', () => {
-  preloader.style.display = 'none';
+  preloader.style.animation = 'hiding 600ms ease 0s 1 normal forwards';
+  preloader.querySelector('img').style.scale = 0.2;
+  preloader.querySelector('img[alt="spinner"]').style.scale = 0;
 });
 
+preloader.addEventListener('animationend', () => {
+  preloader.style.display = 'none'; // Hide the preloader after the animation ends
+});
+
+// nav
 burger.addEventListener('click', () => {
   nav.classList.toggle('active');
   burger.classList.toggle('active');

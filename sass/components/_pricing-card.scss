@@ -5,7 +5,6 @@
   min-width: 225px;
   padding: 27px 40px 37px;
   border-radius: 15px;
-  // position: relative;
   transition: all 500ms ease;
 
   span {
@@ -102,19 +101,19 @@
   position: absolute;
   display: flex;
   justify-content: center;
-  padding-top: 16px;
+  padding-top: 14px;
   font-family: 'Comfortaa', cursive;
   font-weight: 700;
   font-size: 16px;
   line-height: 19px;
-  color: $black-300;
+  color: $black-300 !important;
   top: 0;
   left: 50%;
   width: 80%;
   height: 51px;
   background: $active-gradient-orange;
   border-radius: 15px 15px 0 0;
-  transform: translate(-50%, -70%);
+  transform: translate(-50%, -72%);
   z-index: -1;
   transition: all 550ms ease;
 }
