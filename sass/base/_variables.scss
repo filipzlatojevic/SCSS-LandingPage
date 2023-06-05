@@ -81,10 +81,6 @@ $inactive-gradient-orange: linear-gradient(167.91deg, #ffd6c4 -1.62%, #ffffff 10
   color: $red-100 !important;
 }
 
-.icon path {
-  fill: currentColor;
-}
-
 // sign-up and sign-in layout
 .sign-up-in-layout {
   padding-top: 145px;
@@ -322,5 +318,11 @@ $inactive-gradient-orange: linear-gradient(167.91deg, #ffd6c4 -1.62%, #ffffff 10
   20%,
   60% {
     transform: translateY(7%);
+  }
+}
+
+@keyframes hiding {
+  to {
+    opacity: 0;
   }
 }

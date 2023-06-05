@@ -28,6 +28,7 @@ body {
 
     img {
       width: 200px;
+      transition: all 400ms;
     }
 
     img[alt='spinner'] {

@@ -1,43 +1,23 @@
-const themeBtn = document.querySelector('#theme-toggle');
 const body = document.body;
+const themeBtn = document.querySelector('#theme-toggle');
 let darkMode = localStorage.getItem('darkMode');
 
-if (darkMode === 'enabled') {
-  enableDarkMode();
-}
-
-themeBtn.addEventListener('click', () => {
-  darkMode = localStorage.getItem('darkMode');
-  // trans();
-  if (darkMode !== 'enabled') {
-    enableDarkMode();
-  } else {
-    disableDarkMode();
-  }
-});
-
-function enableDarkMode() {
+const addDarkMode = () => {
+  body.classList.remove('light-mode');
   body.classList.add('dark');
-  body.offsetWidth; // Force repaint
   localStorage.setItem('darkMode', 'enabled');
-}
+};
 
-function disableDarkMode() {
+const addLightMode = () => {
   body.classList.remove('dark');
-  body.offsetWidth; // Force repaint
+  body.classList.add('light-mode');
   localStorage.setItem('darkMode', '');
-}
+};
 
-// function for transition theme changing
-// function trans() {
-//   if (!isMobileDevice()) {
-//     document.documentElement.classList.add('transition');
-//     window.setTimeout(() => {
-//       document.documentElement.classList.remove('transition');
-//     }, 260);
-//   }
-// }
+const toggleTheme = () => {
+  !body.classList.contains('dark') ? addDarkMode() : addLightMode();
+};
 
-// function isMobileDevice() {
-//   return typeof window.orientation !== 'undefined' || navigator.userAgent.indexOf('IEMobile') !== -1;
-// }
+darkMode === 'enabled' ? addDarkMode() : addLightMode();
+
+themeBtn.addEventListener('click', toggleTheme);
